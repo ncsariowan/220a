@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <title>
+        Homework 0: Beep
+    </title>
+</head>
+
+<body>
+    <button id="start">Start</button>
+    <script>
+
+        const freqs = [220, 440, 660, 880];
+        const oscs = [];
+        const amps = [];
+
+
+        const context = new AudioContext();
+        
+        for (var i = 0; i < freqs.length; i++) {
+            oscs[i] = new OscillatorNode(context);
+            amps[i] = new GainNode(context);
+            oscs[i].frequency.value = freqs[i];
+            oscs[i].connect(amps[i]).connect(context.destination);
+        }
+
+        const start = () => {
+
+            const now = context.currentTime;
+
+            for (var i = 0; i < oscs.length; i++) {
+                oscs[i].start(now);
+                oscs[i].stop(now + 1);
+            }
+        };
+
+        // This code handles the button logic.
+        window.addEventListener('load', () => {
+            document.getElementById('start')
+                .addEventListener('click', start, { once: true });
+        }, { once: true });
+    </script>
+</body>
+
+</html>
