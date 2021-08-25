@@ -145,18 +145,10 @@ const trumpet = async (stream) => {
     amp.gain.setTargetAtTime(volumeLevel, now, timeConstant);
 
     document.getElementById("meter1").style.height = level.map(meter.volume) + "px";
-    // viewDiv.textContent = `
-    //   ${volume.map(meter.volume)}
-    //   ${angle.toFixed(0)}
-    //   ${length}
-    //   X1: ${axes[0].toFixed(4)}
-    //   Y1: ${axes[1].toFixed(4)}
-    //   X2: ${axes[2].toFixed(4)}
-    //   1: ${pad.buttons[0].pressed}
-    //   2: ${pad.buttons[1].pressed}
-    //   3: ${pad.buttons[2].pressed}
-    //   4: ${pad.buttons[3].pressed}
-    // `;
+    viewDiv.textContent = `
+      Overtone: ${overtone} 
+      Fundamental frequency: ${(fundamental * overtone).toFixed(1)} hz
+    `;
 
     window.requestAnimationFrame(draw);
   });

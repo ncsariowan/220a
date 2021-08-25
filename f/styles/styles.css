@@ -17,7 +17,7 @@ body {
 #view {
   font-family: monospace;
   padding: 1em;
-  background-color: #eceff1;
+  /* background-color: #eceff1; */
 }
 
 
@@ -56,4 +56,8 @@ body {
   width: 25px;
   height: 150px;
   background: white;
+}
+
+#view {
+  max-width: 500px;
 }

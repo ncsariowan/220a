@@ -19,23 +19,24 @@
     <div class="pure-u-3-4" id="audio-download-link">
     </div>
   </div>
-
-  <input type="checkbox" id="micInput" name="micInput" value="true" checked>
-  <label for="micInput">Use Mic Input</label><br>
-  <canvas id="canvas" width="600" height="600"></canvas>
-  <button class="pure-button btn-record" id="btn-toggle-record">
-    Record
-  </button>
+  <div>
+    <button class="pure-button btn-record" id="btn-toggle-record">
+      Record
+    </button>
+    <input type="checkbox" id="micInput" name="micInput" value="true" checked>
+    <label for="micInput">Use Mic Input</label><br>
+  </div>
 
   <div>
 
+    <canvas id="canvas" width="600" height="600"></canvas>
+
+    <div id="view" ></div>
     <div class="meter-container">
       <div class="meter" id="meter1"></div>
     </div>
     <div class="level">
     </div>
-
-    <!-- <div id="view"></div> -->
     <script src="./scripts/volume-meter.js"></script>
     <script src="./main.js" type="module"></script>
 </body>
