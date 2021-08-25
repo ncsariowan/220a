@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
+    integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Music 220A HW Final Project: Gamepad Trumpet</title>
+</head>
+
+<body>
+  <h1>Music 220A Final Project: Gamepad Trumpet</h1>
+  <p>Nathan Sariowan</p>
+  <div class="pure-g">
+    <div class="pure-u-1-4">
+      <!-- <button class="pure-button" id="btn-start">Start</button> -->
+    </div>
+    <div class="pure-u-3-4" id="audio-download-link">
+    </div>
+  </div>
+
+  <input type="checkbox" id="micInput" name="micInput" value="true" checked>
+  <label for="micInput">Use Mic Input</label><br>
+  <canvas id="canvas" width="600" height="600"></canvas>
+  <button class="pure-button btn-record" id="btn-toggle-record">
+    Record
+  </button>
+
+  <div>
+
+    <div class="meter-container">
+      <div class="meter" id="meter1"></div>
+    </div>
+    <div class="level">
+    </div>
+
+    <!-- <div id="view"></div> -->
+    <script src="./scripts/volume-meter.js"></script>
+    <script src="./main.js" type="module"></script>
+</body>
+
+</html>

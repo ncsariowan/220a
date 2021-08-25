@@ -1,0 +1,59 @@
+body {
+  padding: 1em;
+}
+
+.btn-record {
+  background: #ef5350;
+  color: #ffffff;
+}
+
+.file-download-link {
+  line-height: 1.8em;
+  display: block;
+  padding: 0 0.6em;
+  color: #80d8ff;
+}
+
+#view {
+  font-family: monospace;
+  padding: 1em;
+  background-color: #eceff1;
+}
+
+
+.meter-wrapper {
+  display: flex;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 50px;
+  width: 800px;
+  background: black;
+  border: solid #363636 25px;
+  border-radius: 25px;
+}
+
+.level {
+  display: inline-block;
+  height: 180px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 10px;
+  line-height: 1.8em;
+}
+
+.meter-container {
+  display: inline-block;
+  background: -webkit-linear-gradient(#e21d1d 4%, #ff9d00 12%, #fff200 22%, #f2ea00 37%, #52b152 59%, #52b152 59%, #008a00 79%);
+  margin: auto;
+  width: 25px;
+  height: 150px;
+  display: hidden;
+}
+
+.meter {
+  display: inline-block;
+  position: absolute;
+  width: 25px;
+  height: 150px;
+  background: white;
+}
