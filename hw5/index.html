@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Music 220A HW 5: Gamepad Trumpet</title>
+  </head>
+  <body>
+    <h1>Music 220A HW 5: Gamepad Trumpet</h1>
+    <p>See <a href="http://ccrma.stanford.edu/courses/220a/homework/gestural-synth/" target="_blank">
+      this page</a> for the detailed instruction.</p>
+    </p>
+    <div class="pure-g">
+      <div class="pure-u-1-4">
+        <button class="pure-button" id="btn-start">Start</button>
+        <button class="pure-button btn-record" id="btn-toggle-record">
+          Record
+        </button>
+      </div>
+      <div class="pure-u-3-4" id="audio-download-link">
+      </div>
+    </div>
+    <p>The controller has been coded to resemble the interface of a simple Bb trumpet. The controller is meant to be held sideways, so that the right hand can rest upon the XYAB keys like trumpet valves.</p>
+    <img src="./media/gamepad.jpg" width=150px>
+    <h2>Mappings:</h2>
+    <ul>
+      <li>Left Joystick: x controls vibrato, y controls low pass</li>
+      <li>Right Joystick: reads the angle the joystick is pushed at and maps that angle to a note in the harmonic series: Bb, F, Bb, D, etc.</li>
+      <li>Valves 1, 2 and 3 of a trumpet correspond to buttons 2, 3 and 4 on the gamepad, respectively. The pitch is calculated by summing the total length of tubing added by the valves and determining the resulting frequency -- the tube length alone is 148 cm, and the valve lengths are 17.9 cm, 8.6 cm and 27.8 cm respectively.</li>
+      <li>Right bumper triggers the note and is meant to be pressed with the palm.</li>
+    </ul>
+    <h2>Examples</h2>
+    <p>Full harmonic series of trumpet, as well as filter and vibrato controls.</p>
+    <audio controls src="./media/range.wav"></audio>
+    <p>Chromatic scale on trumpet</p>
+    <audio controls src="./media/chromatic.wav"></audio>
+    <p>Classic Reveille. The joystick does not offer much granularity, and so even simple songs are tricky!</p>
+    <audio controls src="./media/reveille.wav"></audio>
+    <p>Moon River. Adding valves makes playing songs even harder, especially having to use the palm trigger! Note the discrepancies in intonation caused </p>
+    <audio controls src="./media/moonriver.wav"></audio>
+    <div id="view"></div>
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>

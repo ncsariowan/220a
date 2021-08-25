@@ -1,0 +1,21 @@
+body {
+  padding: 1em;
+}
+
+.btn-record {
+  background: #ef5350;
+  color: #ffffff;
+}
+
+.file-download-link {
+  line-height: 1.8em;
+  display: block;
+  padding: 0 0.6em;
+  color: #80d8ff;
+}
+
+#view {
+  font-family: monospace;
+  padding: 1em;
+  background-color: #eceff1;
+}
