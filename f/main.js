@@ -192,6 +192,8 @@ const draw = () => {
   ctx.restore();
   ctx.drawImage(valve2, 0, 0, framesize, framesize + (valve2pressed ? 20 : halfValve ? 10 : 0));
   ctx.drawImage(valve3, 0, 0, framesize, framesize + (valve3pressed ? 20 : halfValve ? 10 : 0));
+  ctx.fillStyle = "#EEEEEE";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
 const main = async (event) => {
