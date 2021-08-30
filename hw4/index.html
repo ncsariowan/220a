@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Music 220A Homework: Effects and Patterns</title>
+  </head>
+  <body>
+    <div class="pure-g">
+      <div class="pure-u-1-1 center">
+        <h1>Music 220A Homework #4: Effects and Patterns</h1>
+        <p>by Nathan Sariowan</p>
+
+        <p>This chuck script models a <a target="_blank" href="https://en.wikipedia.org/wiki/Octave_effect">sub-octave pedal</a> commonly used with electric basses. </p>
+        <p>The script takes the logic of a comparator to find the frequency of the signal, and the logic of a d flip-flop to halve the frequency (and that frequency halved again for a second octave). The resulting square wave is then used to invert the original signal and thus create a natural-sounding suboctave effect. The signal is low-passed both before and after being octaved -- before to clean the signal and help the comparator find the frequency, and after to reduce the harmonics that result from the inversion. Logic is written at the sample level.</p>
+        <p>There are variables for the mix of the first octave, second octave and dry signal.</p> 
+        <p>Code can be found <a href="octaver.ck">here.</a></p>
+
+        <br>
+        <h2>Samples:</h2>
+        <p>Samples were recorded directly using my electric bass.</p>
+        <!-- <img id="excerpt" src="media/excerpt.png"> -->
+        <div>
+          <p>Dry</p>
+          <audio controls src="./media/octaverdry.wav"></audio>
+        </div>
+        <div>
+          <p>With first octave</p>
+          <audio controls src="./media/octaver1.wav"></audio>
+        </div>
+        <div>
+          <p>With second octave</p>
+          <audio controls src="./media/octaver2.wav"></audio>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>
